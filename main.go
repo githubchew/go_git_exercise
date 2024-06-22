@@ -7,16 +7,25 @@ import (
 )
 
 func main() {
-	var todo []string
-	todo = append(todo, "sing")
-	todo = append(todo, "cook")
-	todo = append(todo, "sow")
-	todo = append(todo, "plank")
-	todo = append(todo, "go","eat","play")
-	tomorrow := []string{ "see mom","learn golang"}
+	items := []string{
+		"pacman", "arifo", "teris", "frogger",
+		"pacman", "arfio", "terifs", "frogger",
+		"pacman", "ario", "terfis", "frogger",
+		"pacmfn",
+	}
 
-	todo = append(todo, tomorrow...)
-	s.Show("todo", todo)
+	const pageSize = 6
+
+	l := len(items)
+	for from := 0; from < l; from += pageSize {
+		to := from + pageSize
+		if to > l {
+			to = l
+		}
+
+	currentPage := items[from:to]
+	head :=fmt.Sprintf("page #%d", (from / pageSize))
+	s.Show(head, currentPage)
+	}
 
 }
-llllllll
