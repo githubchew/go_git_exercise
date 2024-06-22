@@ -1,5 +1,5 @@
 package main
 
-func main(){
-	println("hello, world")
+func main() {
+	var todo []string
 }
